@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../FirebaseConfig";
 import banner_img from "../../assets/excitednoob_IOT_sensors_Devices_machines_in_a_industry_Connecte_c0de89d7-79ab-43c3-bdce-1da15b1545dd 1.png";
@@ -6,6 +7,7 @@ import "./loginPage.css";
 
 
 export default function LoginPage() {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -17,6 +19,7 @@ export default function LoginPage() {
       // Sign in with email and password
       await signInWithEmailAndPassword(auth, email, password);
       // If successful, you can redirect the user to another page
+      history.push("https://www.predco.ai/contact");
       console.log("Logged in successfully");
     } catch (error) {
       setError("User not Found Please Sign in with Google");
