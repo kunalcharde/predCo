@@ -32,7 +32,6 @@ export default function LoginPage() {
       // If successful, you can redirect the user to another page
       console.log("Logged in with Google successfully");
     } catch (error) {
-      toast.error('An error occurred. Please try again.');
       setError(error.message);
     }
   };
