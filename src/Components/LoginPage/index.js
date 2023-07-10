@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../FirebaseConfig";
 import banner_img from "../../assets/excitednoob_IOT_sensors_Devices_machines_in_a_industry_Connecte_c0de89d7-79ab-43c3-bdce-1da15b1545dd 1.png";
